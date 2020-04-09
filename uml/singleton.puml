@@ -3,6 +3,6 @@ class Singleton
 {
     - Singleton instance
     - Singleton()
-    + Singleton GetInstance
+    + Singleton GetInstance()
 }
 @enduml
