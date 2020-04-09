@@ -1,16 +1,30 @@
 @startuml
 IExample <|.. Example
+Example <|-- DerivedExample
 
 interface IExample 
 {
+    + string PublicProperty
     + Initialize()
 }
 
 class Example 
 {
-    + string Title
-    
-    + Example()    
+    - string privateField
+    + string PublicProperty
+    # bool ProtectedProperty
+    ~ int InternalProperty
+    + Example()
     + bool Initialize()
+}
+
+class DerivedExample 
+{
+    - string privateField
+    + string PublicProperty
+    # bool ProtectedProperty
+    ~ int InternalProperty
+    + DerivedExample()
+    + string SayHello()
 }
 @enduml
