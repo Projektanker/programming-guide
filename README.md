@@ -9,7 +9,7 @@
     - [Design pattern](#design-pattern)
       - [Creational pattern](#creational-pattern)
         - [Singleton pattern](#singleton-pattern)
-  - [C](#c)
+  - [C<span>#</span>](#c)
   - [Mathematics](#mathematics)
   - [Unity](#unity)
 
@@ -56,7 +56,7 @@ class Singleton
 ```
 
 
-## C#
+## C<span>#</span>
 
 ## Mathematics
 
