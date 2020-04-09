@@ -1,0 +1,16 @@
+@startuml
+IExample <|.. Example
+
+interface IExample 
+{
+    + Initialize()
+}
+
+class Example 
+{
+    + string Title
+    
+    + Example()    
+    + bool Initialize()
+}
+@enduml
