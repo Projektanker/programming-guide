@@ -1,260 +1,188 @@
-Inhalt {#inhalt .list-paragraph}
+Programming Guide
 ======
+- [Code Design](#code-design)
+    - [SOLID Prinzipien](#solid-prinzipien)
+        - [**S**ingle Responsibility Principle](#single-responsibility-principle)
+        - [**O**pen Closed Principle](#open-closed-principle)
+        - [**L**iskov Substituion Principle](#liskov-substituion-principle)
+        - [**I**nterface Segregation Principle](#interface-segregation-principle)
+        - [**D**ependency Inversion Principle](#dependency-inversion-principle)
+
+    - [UML Klassendiagramme](#uml-klassendiagramme)
+        - [UML - klassenspzifische Angaben](#uml---klassenspzifische-angaben)
+        - [Vererbung / Verbindungen zwischen Klassen / Multiplizitäten](#vererbung-verbindungen-zwischen-klassen-multiplizitäten)
+
+    - [Design Patterns](#design-patterns)
+        - [Erzeugungsmsuter](#erzeugungsmsuter)
+            - [Factory Method Pattern](#factory-method-pattern)
+            - [Abstract Factory Pattern](#abstract-factory-pattern)
+            - [Singleton Pattern](#singleton-pattern)
+        - [Strukturmuster](#strukturmuster)
+            - [Adapter Pattern](#adapter-pattern)
+            - [Composite Pattern](#composite-pattern)
+            - [Decorator Pattern](#decorator-pattern)
+            - [Facade Pattern](#facade-pattern)
+            - [Flyweight Pattern](#flyweight-pattern)
+            - [Proxy Pattern](#proxy-pattern)
+        - [Verhaltensmuster](#verhaltensmuster)
+            - [Command Pattern](#command-pattern)
+            - [Iterator Pattern](#iterator-pattern)
+            - [Mediator Pattern](#mediator-pattern)
+            - [Memento Patttern](#memento-patttern)
+            - [Observer Pattern](#observer-pattern)
+            - [Strategy Pattern](#strategy-pattern)
+            - [Template Method Pattern](#template-method-pattern)
+            - [State Pattern](#state-pattern)
+    - [C\#](#c)
+        - [Threads](#threads)
+    - [Mathmatics](#mathematics)
 
-[Inhalt 1](#_Toc36800162)
+    - [Unity](#unity)
+        - [Unity Shortcuts](#unity-shortcuts)
+        - [Style Guide](#style-guide)
+            - [Welche Klassen/Scripte machen Sinn?](#welche-klassenscripte-machen-sinn)
+            - [Welche Szenen machen Sinn?](#welche-szenen-machen-sinn)
+            - [Controller](#controller)
+            - [Refactoring](#refactoring)
+            - [Reusability](#reusability)
+        - [Delegaten/Lambda Expressions](#delegatenlambda-expressions)
+            - [Delegaten](#delegaten)
+            - [Lambda Expressions](#lambda-expressions)
+            - [Events](#events)
+        - [Performance](#performance)
+            - [Allgemein](#allgemein)
+            - [Math-Functions](#math-functions)
+            - [Object-Pooling](#object-pooling)
+        - [Special Folders](#special-folders)
+            - [StreamingAssets](#streamingassets)
+            - [Scripts/Editor](#scriptseditor)
+            - [Resources](#resources)
+            - [Plugins](#plugins)
+        - [Deklarationen](#deklarationen)
+            - [Static](#static)
+            - [Enum](#enum)
+        - [Events](#events-1)
+            - [Allgemein](#allgemein-1)
+            - [Deklaration](#deklaration)
+            - [Aufruf](#aufruf)
+            - [Registrierung des Handlers](#registrierung-des-handlers)
+            - [Registrierung eines Handlers auf mehreren Objekte](#registrierung-eines-handlers-auf-mehreren-objekte)
+        - [Mathfunctions](#mathfunctions)
 
-[1 Code Design 5](#code-design)
+[Allgemein](#allgemein-2)
 
-[1.1 SOLID Prinzipien 5](#solid-prinzipien)
+[Winkel](#winkel)
 
-[1.1.1 **S**ingle Responsibility Principle
-5](#single-responsibility-principle)
+[Distanzen](#distanzen)
 
-[1.1.2 **O**pen Closed Principle 5](#open-closed-principle)
+[MonoBehaviour](#monobehaviour)
 
-[1.1.3 **L**iskov Substituion Principle
-5](#liskov-substituion-principle)
+[Flowchart](#flowchart)
 
-[1.1.4 **I**nterface Segregation Principle
-5](#interface-segregation-principle)
+[Mouse Input](#mouse-input)
 
-[1.1.5 **D**ependency Inversion Principle
-5](#dependency-inversion-principle)
+[Visual](#visual)
 
-[1.2 UML Klassendiagramme 5](#uml-klassendiagramme)
+[Rotationen](#rotationen)
 
-[1.2.1 UML - klassenspzifische Angaben
-6](#uml---klassenspzifische-angaben)
+[Quaternion vs. Euler](#quaternion-vs.-euler)
 
-[1.2.2 Vererbung / Verbindungen zwischen Klassen / Multiplizitäten
-6](#vererbung-verbindungen-zwischen-klassen-multiplizitäten)
+[Space](#space)
 
-[1.3 Design Patterns 6](#design-patterns)
+[Mathfunctions](#mathfunctions-1)
 
-[1.3.1 Erzeugungsmsuter 7](#erzeugungsmsuter)
+[LookAt](#lookat)
 
-[1.3.1.1 Factory Method Pattern 7](#factory-method-pattern)
+[Rotationen Damping](#rotationen-damping)
 
-[1.3.1.2 Abstract Factory Pattern 8](#abstract-factory-pattern)
+[Animationen](#animationen)
 
-[1.3.1.3 Singleton Pattern 9](#singleton-pattern)
+[Anlegen von Animations Clips](#anlegen-von-animations-clips)
 
-[1.3.2 Strukturmuster 10](#strukturmuster)
+[Bearbeiten von Animations Clips
+](#bearbeiten-von-animations-clips)
 
-[1.3.2.1 Adapter Pattern 10](#adapter-pattern)
+[Anlegen von Propertys in Clips
+](#anlegen-von-propertys-in-clips)
 
-[1.3.2.2 Composite Pattern 11](#composite-pattern)
+[Erstellen von Keyframes](#erstellen-von-keyframes)
 
-[1.3.2.3 Decorator Pattern 12](#decorator-pattern)
+[Bearbeiten von Keyframes (Preview-Mode)
+](#bearbeiten-von-keyframes-preview-mode)
 
-[1.3.2.4 Facade Pattern 12](#facade-pattern)
+[Animator Probleme](#animator-probleme)
 
-[1.3.2.5 Flyweight Pattern 13](#flyweight-pattern)
+[Materials](#materials)
 
-[1.3.2.6 Proxy Pattern 14](#proxy-pattern)
+[Material Charts](#material-charts)
 
-[1.3.3 Verhaltensmuster 14](#verhaltensmuster)
+[Texturen](#texturen)
 
-[1.3.3.1 Command Pattern 14](#command-pattern)
+[Import](#import)
 
-[1.3.3.2 Iterator Pattern 16](#iterator-pattern)
+[Rendertexturen](#rendertexturen)
 
-[1.3.3.3 Mediator Pattern 17](#mediator-pattern)
+[Level of Detail -- LOD](#level-of-detail-lod)
 
-[1.3.3.4 Memento Patttern 17](#memento-patttern)
+[Naming](#naming)
 
-[1.3.3.5 Observer Pattern 17](#observer-pattern)
+[Datenverarbeitung](#datenverarbeitung)
 
-[1.3.3.6 Strategy Pattern 19](#strategy-pattern)
+[XML](#xml)
 
-[1.3.3.7 Template Method Pattern 19](#template-method-pattern)
+[Aufbau XML](#aufbau-xml)
 
-[1.3.3.8 State Pattern 20](#state-pattern)
+[Datenklasse in Unity anlegen](#datenklasse-in-unity-anlegen)
 
-[2 C\# 20](#c)
+[Einlesen XML in Unity](#einlesen-xml-in-unity)
 
-[2.1 Threads 20](#threads)
+[AI](#ai)
 
-[3 Mathmatics 20](#_Toc36800196)
+[NavMesh](#navmesh)
 
-[4 Unity 20](#unity)
+[Setup](#setup)
 
-[4.1 Unity Shortcuts 20](#unity-shortcuts)
+[Setup Area](#setup-area)
 
-[4.2 Style Guide 21](#style-guide)
+[NavMeshAgent](#navmeshagent)
 
-[4.2.1 Welche Klassen/Scripte machen Sinn?
-21](#welche-klassenscripte-machen-sinn)
+[Obstacles](#obstacles)
 
-[4.2.2 Welche Szenen machen Sinn? 21](#welche-szenen-machen-sinn)
+[NavMesh Link](#navmesh-link)
 
-[4.2.3 Controller 21](#controller)
+[Builds](#builds)
 
-[4.2.4 Refactoring 21](#refactoring)
+[Third PartyPlugins](#third-partyplugins)
 
-[4.2.5 Reusability 21](#reusability)
+[ILocalization](#i2-localization)
 
-[4.3 Delegaten/Lambda Expressions 21](#delegatenlambda-expressions)
+[Setup](#setup-1)
 
-[4.3.1 Delegaten 21](#delegaten)
+[Sprachen einstellen](#sprachen-einstellen)
 
-[4.3.2 Lambda Expressions 22](#lambda-expressions)
+[Übersetzungen definieren](#übersetzungen-definieren)
 
-[4.3.3 Events 22](#events)
+[Update](#update)
 
-[4.4 Performance 22](#_Toc36800211)
+[Visual Studio](#visual-studio)
 
-[4.4.1 Allgemein 22](#allgemein)
+[Shortcuts Text](#shortcuts-text)
 
-[4.4.2 Math-Functions 22](#math-functions)
+[Navigation & Windows](#navigation-windows)
 
-[4.4.3 Object-Pooling 22](#object-pooling)
+[Running, Debugging & Compiling](#running-debugging-compiling)
 
-[4.5 Special Folders 23](#special-folders)
+[Code Snippets](#code-snippets)
 
-[4.5.1 StreamingAssets 23](#streamingassets)
+[Extensions](#extensions)
 
-[4.5.2 Scripts/Editor 23](#scriptseditor)
+[Tipps und Tricks](#tipps-und-tricks)
 
-[4.5.3 Resources 23](#resources)
+[View und Engine](#view-und-engine)
 
-[4.5.4 Plugins 23](#plugins)
+[Anhang](#anhang)
 
-[4.6 Deklarationen 23](#deklarationen)
-
-[4.6.1 Static 23](#static)
-
-[4.6.2 Enum 23](#_Toc36800227)
-
-[4.7 Events 23](#events-1)
-
-[4.7.1 Allgemein 23](#allgemein-1)
-
-[4.7.2 Deklaration 24](#deklaration)
-
-[4.7.3 Aufruf 24](#aufruf)
-
-[4.7.4 Registrierung des Handlers 24](#registrierung-des-handlers)
-
-[4.7.5 Registrierung eines Handlers auf mehreren Objekte
-24](#registrierung-eines-handlers-auf-mehreren-objekte)
-
-[4.8 Mathfunctions 24](#_Toc36800239)
-
-[4.8.1 Allgemein 24](#allgemein-2)
-
-[4.8.2 Winkel 25](#winkel)
-
-[4.8.3 Distanzen 25](#distanzen)
-
-[4.9 MonoBehaviour 26](#monobehaviour)
-
-[4.9.1 Flowchart 26](#flowchart)
-
-[4.9.2 Mouse Input 27](#mouse-input)
-
-[5 Visual 27](#visual)
-
-[5.1 Rotationen 27](#rotationen)
-
-[5.1.1 Quaternion vs. Euler 27](#quaternion-vs.-euler)
-
-[5.1.2 Space 27](#space)
-
-[5.1.3 Mathfunctions 27](#mathfunctions-1)
-
-[5.1.4 LookAt 27](#lookat)
-
-[5.1.5 Rotationen Damping 27](#rotationen-damping)
-
-[5.2 Animationen 27](#animationen)
-
-[5.2.1 Anlegen von Animations Clips 27](#anlegen-von-animations-clips)
-
-[5.2.2 Bearbeiten von Animations Clips
-27](#bearbeiten-von-animations-clips)
-
-[5.2.3 Anlegen von Propertys in Clips
-28](#anlegen-von-propertys-in-clips)
-
-[5.2.4 Erstellen von Keyframes 28](#erstellen-von-keyframes)
-
-[5.2.5 Bearbeiten von Keyframes (Preview-Mode)
-28](#bearbeiten-von-keyframes-preview-mode)
-
-[5.2.6 Animator Probleme 28](#animator-probleme)
-
-[5.3 Materials 28](#materials)
-
-[5.3.1 Material Charts 28](#material-charts)
-
-[5.4 Texturen 28](#texturen)
-
-[5.4.1 Import 28](#import)
-
-[5.4.2 Rendertexturen 28](#rendertexturen)
-
-[5.5 Level of Detail -- LOD 28](#level-of-detail-lod)
-
-[5.5.1 Naming 28](#naming)
-
-[6 Datenverarbeitung 29](#datenverarbeitung)
-
-[6.1 XML 29](#xml)
-
-[6.1.1 Aufbau XML 29](#aufbau-xml)
-
-[6.1.2 Datenklasse in Unity anlegen 29](#datenklasse-in-unity-anlegen)
-
-[6.1.3 Einlesen XML in Unity 30](#einlesen-xml-in-unity)
-
-[7 AI 31](#ai)
-
-[7.1 NavMesh 31](#navmesh)
-
-[7.1.1 Setup 31](#setup)
-
-[7.1.2 Setup Area 31](#setup-area)
-
-[7.1.3 NavMeshAgent 31](#navmeshagent)
-
-[7.1.4 Obstacles 31](#obstacles)
-
-[7.1.5 NavMesh Link 31](#navmesh-link)
-
-[8 Builds 31](#builds)
-
-[9 Third PartyPlugins 31](#third-partyplugins)
-
-[9.1 I2 Localization 31](#i2-localization)
-
-[9.1.1 Setup 31](#setup-1)
-
-[9.1.2 Sprachen einstellen 32](#sprachen-einstellen)
-
-[9.1.3 Übersetzungen definieren 32](#übersetzungen-definieren)
-
-[9.1.4 Update 32](#update)
-
-[10 Visual Studio 32](#visual-studio)
-
-[10.1 Shortcuts Text 32](#shortcuts-text)
-
-[10.2 Navigation & Windows 33](#navigation-windows)
-
-[10.3 Running, Debugging & Compiling 33](#running-debugging-compiling)
-
-[10.4 Code Snippets 33](#code-snippets)
-
-[10.5 Extensions 33](#extensions)
-
-[11 Tipps und Tricks 34](#tipps-und-tricks)
-
-[11.1 View und Engine 34](#view-und-engine)
-
-[12 Anhang 34](#anhang)
-
-[12.1 Tutorials 34](#tutorials)
+[Tutorials](#tutorials)
 
 Code Design
 ===========
