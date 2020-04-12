@@ -68,121 +68,70 @@ Programming Guide
             - [Registrierung des Handlers](#registrierung-des-handlers)
             - [Registrierung eines Handlers auf mehreren Objekte](#registrierung-eines-handlers-auf-mehreren-objekte)
         - [Mathfunctions](#mathfunctions)
+            - [Allgemein](#allgemein-2)
+            - [Winkel](#winkel)
+            - [Distanzen](#distanzen)
+        - [MonoBehaviour](#monobehaviour)
+            - [Flowchart](#flowchart)
+            - [Mouse Input](#mouse-input)
 
-[Allgemein](#allgemein-2)
+    - [Visual](#visual)
+        - [Rotationen](#rotationen)
+            - [Quaternion vs. Euler](#quaternion-vs.-euler)
+            - [Space](#space)
+            - [Mathfunctions](#mathfunctions-1)
+            - [LookAt](#lookat)
+            - [Rotationen Damping](#rotationen-damping)
+        - [Animationen](#animationen)
+            - [Anlegen von Animations Clips](#anlegen-von-animations-clips)
+            - [Bearbeiten von Animations Clips](#bearbeiten-von-animations-clips)
+            - [Anlegen von Propertys in Clips](#anlegen-von-propertys-in-clips)
+            - [Erstellen von Keyframes](#erstellen-von-keyframes)
+            - [Bearbeiten von Keyframes (Preview-Mode)](#bearbeiten-von-keyframes-preview-mode)
+            - [Animator Probleme](#animator-probleme)
+        - [Materials](#materials)
+            - [Material Charts](#material-charts)
+        - [Texturen](#texturen)
+            - [Import](#import)
+            - [Rendertexturen](#rendertexturen)
+        - [Level of Detail -- LOD](#level-of-detail-lod)
+            - [Naming](#naming)
 
-[Winkel](#winkel)
+    - [Datenverarbeitung](#datenverarbeitung)
+        - [XML](#xml)
+            - [Aufbau XML](#aufbau-xml)
+            - [Datenklasse in Unity anlegen](#datenklasse-in-unity-anlegen)
+            - [Einlesen XML in Unity](#einlesen-xml-in-unity)
 
-[Distanzen](#distanzen)
+    - [AI](#ai)
+        - [NavMesh](#navmesh)
+        - [Setup](#setup)
+        - [Setup Area](#setup-area)
+        - [NavMeshAgent](#navmeshagent)
+        - [Obstacles](#obstacles)
+        - [NavMesh Link](#navmesh-link)
 
-[MonoBehaviour](#monobehaviour)
+    - [Builds](#builds)
 
-[Flowchart](#flowchart)
-
-[Mouse Input](#mouse-input)
-
-[Visual](#visual)
-
-[Rotationen](#rotationen)
-
-[Quaternion vs. Euler](#quaternion-vs.-euler)
-
-[Space](#space)
-
-[Mathfunctions](#mathfunctions-1)
-
-[LookAt](#lookat)
-
-[Rotationen Damping](#rotationen-damping)
-
-[Animationen](#animationen)
-
-[Anlegen von Animations Clips](#anlegen-von-animations-clips)
-
-[Bearbeiten von Animations Clips
-](#bearbeiten-von-animations-clips)
-
-[Anlegen von Propertys in Clips
-](#anlegen-von-propertys-in-clips)
-
-[Erstellen von Keyframes](#erstellen-von-keyframes)
-
-[Bearbeiten von Keyframes (Preview-Mode)
-](#bearbeiten-von-keyframes-preview-mode)
-
-[Animator Probleme](#animator-probleme)
-
-[Materials](#materials)
-
-[Material Charts](#material-charts)
-
-[Texturen](#texturen)
-
-[Import](#import)
-
-[Rendertexturen](#rendertexturen)
-
-[Level of Detail -- LOD](#level-of-detail-lod)
-
-[Naming](#naming)
-
-[Datenverarbeitung](#datenverarbeitung)
-
-[XML](#xml)
-
-[Aufbau XML](#aufbau-xml)
-
-[Datenklasse in Unity anlegen](#datenklasse-in-unity-anlegen)
-
-[Einlesen XML in Unity](#einlesen-xml-in-unity)
-
-[AI](#ai)
-
-[NavMesh](#navmesh)
-
-[Setup](#setup)
-
-[Setup Area](#setup-area)
-
-[NavMeshAgent](#navmeshagent)
-
-[Obstacles](#obstacles)
-
-[NavMesh Link](#navmesh-link)
-
-[Builds](#builds)
-
-[Third PartyPlugins](#third-partyplugins)
-
-[ILocalization](#i2-localization)
-
-[Setup](#setup-1)
-
-[Sprachen einstellen](#sprachen-einstellen)
-
-[Übersetzungen definieren](#übersetzungen-definieren)
-
-[Update](#update)
-
-[Visual Studio](#visual-studio)
-
-[Shortcuts Text](#shortcuts-text)
-
-[Navigation & Windows](#navigation-windows)
-
-[Running, Debugging & Compiling](#running-debugging-compiling)
-
-[Code Snippets](#code-snippets)
-
-[Extensions](#extensions)
-
-[Tipps und Tricks](#tipps-und-tricks)
-
-[View und Engine](#view-und-engine)
-
-[Anhang](#anhang)
-
-[Tutorials](#tutorials)
+    - [Third PartyPlugins](#third-partyplugins)
+        - [ILocalization](#i2-localization)
+            - [Setup](#setup-1)
+            - [Sprachen einstellen](#sprachen-einstellen)
+            - [Übersetzungen definieren](#übersetzungen-definieren)
+            - [Update](#update)
+    
+    - [Visual Studio](#visual-studio)
+        - [Shortcuts Text](#shortcuts-text)
+        - [Navigation & Windows](#navigation-windows)
+        - [Running, Debugging & Compiling](#running-debugging-compiling)
+        - [Code Snippets](#code-snippets)
+        - [Extensions](#extensions)
+        
+    - [Tipps und Tricks](#tipps-und-tricks)
+        - [View und Engine](#view-und-engine)
+    
+    - [Anhang](#anhang)
+        - [Tutorials](#tutorials)
 
 Code Design
 ===========
