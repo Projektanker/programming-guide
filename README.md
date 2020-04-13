@@ -278,7 +278,8 @@ Design Patterns
 -   **Anwendungsfall:** s. [Factory Method
     Pattern](#factory-method-pattern)
 
--   UML:![](.//media/image3.PNG)
+-   UML:
+![](.//media/image3.PNG)
 
 -   Vorteile:
     -   Client komplett enkoppelt
@@ -305,11 +306,14 @@ Design Patterns
         -   Private static object lockobjet = new object();
         -   In getInstance Methode:
 
-> *lock (lockobject)*
->   *{*
->       *If (instance==null)*
->           *Instance = new Singleton();*
->   *}*
+'''C#
+*lock (lockobject)*
+   *{*
+       *If (instance==null)*
+           *Instance = new Singleton();*
+   *}*
+'''
+
 
 -   Vorteile:
 
