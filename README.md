@@ -1715,7 +1715,7 @@ Shortcuts Text
 |Was macht der Shortcut?                    |Windows                                   |Mac                                     |
 |-------------------------------------------|----------------------------------------- |----------------------------------------|
 |  Zur Referenz springen                    |F12                                       |Fn + F12                                |    
-|  Zum nächsten Wort springen               |Strg + / Strg +                           |alt + / alt +                           |
+|  Zum nächsten Wort springen               |Strg + → / Strg + ←                       |alt + → / alt + ←                       |
 |  Zum Anfang/ Ende der Zeile springen      |Home / End                                |Fn + / Fn +                             |
 |  Runter-/Hochscrollen                     |Page Down/ Page Up                        |Fn + ↑ / Fn + ↓                         |
 |  Zum Anfang / Ende der Datei springen     |Strg + Home / Strg + End                  |Fn + alt + ↑ / Fn + alt + ↓             |
@@ -1731,62 +1731,63 @@ Shortcuts Text
 |  Bookmark Window                          |Strg + W, B                               |                                        |
 |  Bereich klappen toggle                   |Strg + M, Strg + M                        |Shift + alt + Cmd +  ←                  |
 
-  ----------------------------------------- ------------------ --
-  Finden-Dialog anzeigen                    Strg + F           
-  Finden in Dateien -- Dialog anzeigen      Shift + Strg + F   
-  Nächstes/ vorheriges Ergebnis der Suche   F3 / Shift + F3    
-  Ersetzen- Dialog                          Strg + H           
-  Ergebnis ersetzen                         Alt + R            
-  Alles ersetzen                            Alt + A            
-  ----------------------------------------- ------------------ --
+|  -----------------------------------------| ------------------ |--|
+|  Finden-Dialog anzeigen                   | Strg + F           |  |
+|  Finden in Dateien -- Dialog anzeigen     | Shift + Strg + F   |  |
+|  Nächstes/ vorheriges Ergebnis der Suche  | F3 / Shift + F3    |  |
+|  Ersetzen- Dialog                         | Strg + H           |  |
+|  Ergebnis ersetzen                        | Alt + R            |  |
+|  Alles ersetzen                           | Alt + A            |  |
+|
 
 Navigation & Windows
 --------------------
 
-  Was macht der Shortcut?            Windows               Mac
-  ---------------------------------- --------------------- --------------------
-  Switch durch offene Tabs           Strg + Tab            Ctrl + Tab
-  Reverse Switch durch offene Tabs   Shift + Strg + Tab    Shift + Ctrl + Tab
-  Nächster Tab                       Strg + F6             Cmd + alt + 9
-  Vorheriger Tab                     Strg + Shift + F6     Cmd + alt + 8
-  Tab schließen                      Strg + F4             
-  Alle offenen Tabs schließen        Alt + L + W           
-  Navigator Suche                    Strg + ,              
-  Fullscreen Editor                  Shift + alt + Enter   
+|  Was macht der Shortcut?           | Windows              | Mac                 |  
+|  ----------------------------------| ---------------------| --------------------|
+|  Switch durch offene Tabs          | Strg + Tab           | Ctrl + Tab          |  
+|  Reverse Switch durch offene Tabs  | Shift + Strg + Tab   | Shift + Ctrl + Tab  |
+|  Nächster Tab                      | Strg + F6            | Cmd + alt + 9       |  
+|  Vorheriger Tab                    | Strg + Shift + F6    | Cmd + alt + 8       |  
+|  Tab schließen                     | Strg + F4            |                     |  
+|  Alle offenen Tabs schließen       | Alt + L + W          |                     |  
+|  Navigator Suche                   | Strg + ,             |                     |   
+|  Fullscreen Editor                 | Shift + alt + Enter  |                     |  
 
 Running, Debugging & Compiling
 ------------------------------
 
-  Was macht der Shortcut?                             Windows            Mac
-  --------------------------------------------------- ------------------ -----
-  Run Application                                     Strg + F5          
-  Run Debug Mode                                      F5                 
-  Stop Debug                                          Shift + F5         
-  Breakpoint toggle                                   F9                 
-  Step over Method                                    F10                
-  Step into Method                                    F11                
-  Step out of Method                                  Shift + F11        
-  Compile Application                                 Strg + Shift + B   
-  Zum nächsten Error springen (bei Compile Fehlern)   F8                 
+|  Was macht der Shortcut?                            | Windows           | Mac     |
+|  ---------------------------------------------------| ------------------| -----   |
+|  Run Application                                    | Strg + F5         |         |
+|  Run Debug Mode                                     | F5                |         |
+|  Stop Debug                                         | Shift + F5        |         |
+|  Breakpoint toggle                                  | F9                |         |
+|  Step over Method                                   | F10               |         |
+|  Step into Method                                   | F11               |         |
+|  Step out of Method                                 | Shift + F11       |         |
+|  Compile Application                                | Strg + Shift + B  |         |
+|  Zum nächsten Error springen (bei Compile Fehlern)  | F8                |         |
 
 Code Snippets
 -------------
 
-  Was macht der Shortcut?                         
-  ----------------------------------- ----------- --
-  Klasse erstellen                    class       
-  Konstruktor erstellen               ctor        
-  Property erstellen                  prop        
-  Property mit private field          propfull    
-  Equals Methode                      equals      
-  For-Loop                            for         
-  For-Loop mit Dekrementer Variable   for         
-  Foreach- Loop                       foreach     
-  While-Loop                          while       
-  Do-Loop                             do          
-  Try-/Catch -- Block                 try         
-  Try-/Finally-Block                  tryf        
-  Interface                           interface   
+|  Was macht der Shortcut?            |            | 
+|  -----------------------------------| -----------|
+|  Klasse erstellen                   | class      | 
+|  Konstruktor erstellen              | ctor       | 
+|  Property erstellen                 | prop       | 
+|  Property mit private field         | propfull   | 
+|  Equals Methode                     | equals     | 
+|  For-Loop                           | for        | 
+|  For-Loop mit Dekrementer Variable  | forr       | 
+|  Foreach- Loop                      | foreach    | 
+|  While-Loop                         | while      | 
+|  Do-Loop                            | do         | 
+|  Try-/Catch -- Block                | try        | 
+|  Try-/Finally-Block                 | tryf       | 
+|  Interface                          | interface  |
+|  Console Write Line                 | cw         | 
 
 Extensions
 ----------
