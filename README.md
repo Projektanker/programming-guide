@@ -938,8 +938,8 @@ Beispiel mit Topic Model
     man trifft diese. Danach werden die Daten aktualisiert. „trade" wird
     dem Topic 1 zugeordnet und der Count steigt von 10 auf 11.
 
--   ![](.//media/image28.PNG){width="4.379166666666666in"
-    height="3.334722222222222in"}Topic Selection mittels Gibbs-Sampling:
+-   Topic Selection mittels Gibbs-Sampling:
+![](.//media/image28.PNG)
 
 Unity
 =====
@@ -947,6 +947,7 @@ Unity
 Unity Shortcuts
 ---------------
 
+//TODO: Table
 -   Select MainCamera Strg + Shift + F Align Camera with Scene View
 
 -   Y Toggle Pivot Mode
@@ -971,26 +972,20 @@ Style Guide
 ### Welche Klassen/Scripte machen Sinn?
 
 -   Controller führen mehrere kleinere Scripte zusammen
-
 -   Bsp.: AppController: genreller Start der Anwendung, Initalisieren,
     Laden der Szenen
 
 ### Welche Szenen machen Sinn?
 
 -   Boot Szene für Start
-
 -   Nachladen der ersten Szene (meist additiv)
-
 -   Bei unterschiedlichem Content einzelne Content Szenen
 
 ### Controller
 
 -   Auf das Minimum reduzieren
-
 -   Controller arbeiten Script übergreifend
-
 -   Führen Scripte zusammen
-
 -   Side-Referenzen möglichst nur zum nächst höheren Controller oder zu
     anderen Controllern
 
@@ -999,10 +994,8 @@ Style Guide
 ### Reusability
 
 -   Code mit so wenig Side-Referenzen wie möglich
-
 -   Optimalfall: in sich abgeschlossen mit allgemein gültigen Variablen
     Namen
-
 -   Schlecht: DistanceCameraToWorld Besser: DistanceCameraToTarget
 
 Delegaten/Lambda Expressions
@@ -1012,19 +1005,14 @@ Delegaten/Lambda Expressions
 
 -   Datentyp, in den man Methodenreferenzen speichern kann
     (Methodenzeiger)
-
 -   Referenz zu einer (oder mehreren) Methoden Ausführung mit variablen
     Aufruf
-
 -   Deklaration:
-
-> public delegate int Rechenoperation (int x, int y)
+    - public delegate int Rechenoperation (int x, int y)
 
 -   public delegate Rückgabewert Methodenname (Parameterliste)
-
 -   In Delegaten können nur Funktionen geschrieben werden, die mit
     beidem übereinstimmen
-
 -   Bsp.:
 
 > Rechenoperation op = new Rechenoperation(Addition);
@@ -1046,9 +1034,7 @@ Delegaten/Lambda Expressions
 
 -   Werden benutzt, um einfache Methoden mit return-Statement auf eine
     Zeile zu reduzieren
-
 -   „=\>" Lambda Operator
-
 -   Bsp.:
 
 > delegate int ScoreDelegate(PlayerStats stats);
@@ -1069,15 +1055,10 @@ Delegaten/Lambda Expressions
 
 -   Actions sind Delegaten mit void als Return Typ (Action\<T\> ,
     delegate with void return type, custom parameters)
-
 -   Func sind Delgaten mit custom ReturnTyp und keinem oder Custom
     Parametern (Func\<T\>, delegate with custom return type, no paramter
     / Func\<T1,T2\>, delegate with custom return type, custom parameters
     last parameter = return type)
-
-1.  
-
-    1.  
 
 Performance
 -----------
@@ -1085,40 +1066,27 @@ Performance
 ### Allgemein
 
 -   Update-Methode nicht überladen
-
 -   For \> foreach
-
 -   Direkte Referenz \> GetComponent \> Find...
-
 -   Array \> List List aber dynamisch
 
 ### Math-Functions
 
 -   Potenzen besser als Wurzeln
-
-> Vector3.SqrMagnitude(Position1 - Position2) \> 5² Besser als Distance
-
+    - Vector3.SqrMagnitude(Position1 - Position2) \> 5² Besser als Distance
 -   Multiplikation besser als Division
 
 ### Object-Pooling
 
 -   Performance sparende Variante von Instantiate ist sog.
     „Objekt-Pooling"
-
 -   Empty Gameobject „ObjectPool" erstellen
-
 -   Child Emptys mit jeweiligen Pool Namen
-
 -   Creat Script zum halten der Objekte
-
-> Objekte sind von Anfang in der Szene, werden bei Bedarf Aktiv gesetzt
-> und platziert
-
+    -   Objekte sind von Anfang in der Szene, werden bei Bedarf Aktiv gesetzt und platziert
 -   Wenn letztes Objekt benutzt worden ist, erstes Objekt
     wiederverwenden
-
 -   Spart enorm viel Rechenleistung und müllt RAM nicht zu
-
 -   [Tutorial](#_Object_Pooling)
 
 Special Folders
@@ -1128,7 +1096,6 @@ Special Folders
 
 -   StreamingAssets ist für alle Daten reserviert, die während der
     Laufzeit geladen werden sollen
-
 -   Kein Zugriff im Editor
 
 ### Scripts/Editor
@@ -1149,9 +1116,7 @@ Deklarationen
 ### Static
 
 -   Definiert eine Instanz einmalig
-
 -   Zugriff von allen anderen Instanzen möglich
-
 -   Übergehen von visueller Referenzierung durch Singelton Pattern
 
 public static Controller Instance;
@@ -1173,14 +1138,6 @@ Instance = this;
 }
 
 -   Objekt der Klasse sollte nur einmal in Szene vorhanden sein
-
-1.  
-
-    1.  
-
-    2.  
-
-    3.  1.  
 
 ### Enum
 
@@ -1269,9 +1226,7 @@ Mathfunctions
 ### Winkel
 
 -   Deg2Rad
-
 -   Rad2Deg
-
 -   Negative Winkel berechnen
 
 > rotX = (rotX \> 180) ? rotX - 360 : rotX;
@@ -1281,7 +1236,6 @@ Mathfunctions
 ### Distanzen
 
 -   Vector3.Distance Wurzelberechnung wenig performant
-
 -   Vector3.SqrMagnitude Quadrat Entfernung performanter
 
 If (Vector3.SqrMagnitude(Position1 - Position2) \> 5²)
@@ -1291,7 +1245,7 @@ MonoBehaviour
 
 ### Flowchart
 
-![](.//media/image29.png){width="6.3in" height="8.816666666666666in"}
+![](.//media/image29.png)
 
 1.  
 
@@ -1304,7 +1258,6 @@ MonoBehaviour
 
 -   Methoden: OnMouseOver, OnMouseEnter, OnMouseDown, OnMouseDrag,
     OnMouseUp, OnMouseExit
-
 -   Input lesen - Bsp.: Input. GetAxis(„Mouse X"), Input.GetAxis(„Mouse
     Y")
 
@@ -1318,7 +1271,6 @@ Rotationen
 
 -   Quaterninon ist Winkelangabe im Raum der komplexen Zahlen Vorteil:
     kein Gimbal lock
-
 -   Euler hat bei Bewegungen von zwei Achsen Problem von Gimbal Lock
     Mögliche Lösung über zwei Objekte
 
@@ -1326,9 +1278,7 @@ Rotationen
 
 -   Rotationen lassen sich mit der Welt als Bezug oder mit Bezug zum
     Parent Objekt ausführen Rotate ( Rotationsachse, Winkel, Space)
-
 -   EulerAngles haben Bezug zur Welt Editor hat Angabe
-
 -   localEulerAngles haben Bezug auf Parent
 
 ### Mathfunctions
@@ -1339,7 +1289,6 @@ Rotationen
 
 -   Für Rotationen mit LookAt beachten, dass diese bei einer Drehung \>
     180 Grad oft Probleme mit Gimbal Lock bekommen
-
 -   Alternative zu LookAt
 
 > transform.rotation = Quaternion.LookRotation(transform.position -
@@ -1357,58 +1306,43 @@ Animationen
 ### Anlegen von Animations Clips
 
 -   Auf GameObject klicken
-
 -   Strg + 6 öffnet Aninmations Fenster
-
 -   Klick „Create" erstellt Animations Clip und Controller für das
     jeweilige Objekt
-
 -   Falls Clip offen oben links in Fenster auf den aktuellen Clipnamen
     klicken Dropdown „Create New Clip"
 
 ### Bearbeiten von Animations Clips
 
 -   Clip in Ordner Struktur finden
-
 -   Strg + 6 öffnet Aninmations Fenster
-
 -   Clip anklicken ändern
 
 ### Anlegen von Propertys in Clips
 
 -   Klick „Add Property" Auswählen von zu animierendem Wert
-
 -   Z.B.: Transform Scale
-
 -   In Properties können auch CildrenObjecte Hinzugefügt werden
 
 ### Erstellen von Keyframes
 
 -   Rechtklick auf Zeit "Add Keyframe"
-
 -   Verschieben durch ziehen der Keyframes
-
 -   Oder Preview Mode s. 1.8.5.
 
 ### Bearbeiten von Keyframes (Preview-Mode)
 
 -   Preview Mode aktivieren: oben links im Animations Fenster auf
     Preview klicken
-
 -   Zeitmarker verschieben Werte beim GameObject eingeben (sollten nun
     rot hinterlegt sein)
-
 -   Rechtklick auf Werte Add/Update Keyframes
 
 ### Animator Probleme
 
 -   Animator blockiert Scripte, die auf Transform oder ähnliches
     zugreifen wollen
-
-```{=html}
-<!-- -->
-```
--   Animator während Runtime ausschalten
+    -   Animator während Runtime ausschalten
 
 Materials
 ---------
@@ -1429,7 +1363,6 @@ Texturen
 
 -   Sind Texturen, die einen Camera Input live umsetzen können und
     anschließend als normale Textur eingesetzt werden können
-
 -   [Tutorial](#tutorials)
 
 Level of Detail -- LOD
@@ -1439,19 +1372,10 @@ Level of Detail -- LOD
 
 -   Wenn das Model erstellt wird, ist folgendes Naming für Unity
     wichtig:
+    -   Modelname\_LOD0 für detailreichstes Model
+    -   Modelname\_LOD1 für weniger Details
+    -   Etc.
 
-```{=html}
-<!-- -->
-```
--   Modelname\_LOD0 für detailreichstes Model
-
--   Modelname\_LOD1 für weniger Details
-
--   Etc.
-
-```{=html}
-<!-- -->
-```
 -   Modelle liegen unter Parent Object wenn die Gruppe nach Unity
     exportiert wird, erkennt Unity dies automatisch und erstellt eine
     LOD Group
@@ -1625,48 +1549,37 @@ NavMesh
 ### Setup 
 
 -   Empty GameObject erstellen
-
 -   Nav Mesh Surface hinzufügen
-
 -   AgentType: Agent auswählen, neuen Agent erstellen
-
 -   Include Layer: Layer deaktivieren, die nicht in NavMesh Bake sein
     sollen
-
 -   Use Geometry : Render Meshes oder Physics Colliders
 
 ### Setup Area
 
 -   Um bestimmte Meshes aus dem NavMesh zu nehmen oder einen anderen
     Area Type zu geben Add Component NavMeshModifier
-
 -   Override Area Area Type ändern
 
 ### NavMeshAgent
 
 -   Angular Speed : Geschwindigkeit der Rotation zum neuen Ziel
-
 -   Acceleration: Geschwindigekit für Start der Bewegung und
     Bewegunsänderungen
-
 -   Stopping Distance: Distanz von Ziel bis Agent stoppt
 
 ### Obstacles
 
 -   Add Component NavMeshObstacle
-
 -   Carve unchecked: Route wird nicht um Object herum berechnet Agent
     versucht hindurch zu laufen
-
 -   Carve checked: Route von Agent wird um Object herum berechnet
-
 -   Carve Only Stationary checked: Berechnet kein neues NavMesh, sobald
     sich Obstacle bewegt
 
 ### NavMesh Link
 
 -   Verlinkt NavMeshes miteinander Link = Teleport
-
 -   Width: Breite des Links
 
 Builds
@@ -1681,15 +1594,10 @@ I2 Localization
 ### Setup
 
 -   Resources/I2Languages für Setup
-
 -   Move to Spreadsheets Google
-
 -   Web Service URL Install
-
 -   Script Umbennen
-
 -   Veröffentlichen Als Web-App einrichten
-
 -   Instruktionen folgen für einrichten
 
 ### Sprachen einstellen
@@ -1703,7 +1611,6 @@ I2 Localization
 ### Update
 
 -   Spreadsheets Import Replace/Merge
-
 -   Auto Update Frequency for Build or Editor
 
 Visual Studio
@@ -1731,13 +1638,14 @@ Shortcuts Text
 |  Bookmark Window                          |Strg + W, B                               |                                        |
 |  Bereich klappen toggle                   |Strg + M, Strg + M                        |Shift + alt + Cmd +  ←                  |
 
-|  -----------------------------------------| ------------------ |--|
-|  Finden-Dialog anzeigen                   | Strg + F           |  |
-|  Finden in Dateien -- Dialog anzeigen     | Shift + Strg + F   |  |
-|  Nächstes/ vorheriges Ergebnis der Suche  | F3 / Shift + F3    |  |
-|  Ersetzen- Dialog                         | Strg + H           |  |
-|  Ergebnis ersetzen                        | Alt + R            |  |
-|  Alles ersetzen                           | Alt + A            |  |
+|  Was macht der Shortcut?                  | Windows            |Mac   |
+|  -----------------------------------------| ------------------ |------|
+|  Finden-Dialog anzeigen                   | Strg + F           |      |
+|  Finden in Dateien -- Dialog anzeigen     | Shift + Strg + F   |      |
+|  Nächstes/ vorheriges Ergebnis der Suche  | F3 / Shift + F3    |      |
+|  Ersetzen- Dialog                         | Strg + H           |      |
+|  Ergebnis ersetzen                        | Alt + R            |      |
+|  Alles ersetzen                           | Alt + A            |      |
 |
 
 Navigation & Windows
@@ -1801,11 +1709,8 @@ View und Engine
 ---------------
 
 -   View und Engine so viel wie möglich trennen
-
 -   Klassen
-
 -   lookAt vermeiden Besser : eulerAngles = Vector3.up\*180
-
 -   Sqr Distance besser als Distance
 
 Anhang
