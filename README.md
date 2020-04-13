@@ -142,24 +142,18 @@ SOLID Prinzipien
 ### **S**ingle Responsibility Principle
 
 -   Eine Klasse hat nur eine Verantwortung
-
 -   Sollte nur einen Grund zur Klassenveränderung
-
 -   Probleme:
-
     -   Was genau ist unter EINER Verantwortung zu verstehen?
-
     -   Lösung: Verantwortung muss definiert werden
 
 ### **O**pen Closed Principle
 
 -   Code sollte offen für Erweiterungen sein, aber geschlossen für
     Modifikation (neuen Code hinzufügen ohne alten zu verändern)
-
 -   **Vererbung** ist wichtig für dieses Prinzip (**Abstrakte** Klassen
     erstellen, von denen geerbt werden kann, um spezifische Methoden
     oder Eigenschaften zu implementieren)
-
 -   Weitere Lösungen:
 
     -   Interfaces
