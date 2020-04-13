@@ -1712,24 +1712,24 @@ Visual Studio
 Shortcuts Text
 --------------
 
-  Was macht der Shortcut?                     Windows                                   Mac
-  ------------------------------------------- ----------------------------------------- ----------------------------------------
-  Zur Referenz springen                       F12                                       Fn + F12
-  Zum nächsten Wort springen                  Strg + / Strg +                           alt + / alt +
-  Zum Anfang/ Ende der Zeile springen         Home / End                                Fn + / Fn +
-  Runter-/Hochscrollen                        Page Down/ Page Up                        Fn + ↑ / Fn + ↓
-  Zum Anfang / Ende der Datei springen        Strg + Home / Strg + End                  Fn + alt + ↑ / Fn + alt + ↓
-  Duplizieren                                 Strg + D                                  Cmd + D
-  Löschen eines Wortes                        Strg + Backspace / Strg+ Entf             Alt + Backspace / fn + alt + Backspace
-  Ganze Zeile löschen                         Strg + L / Strg + X                       Ctrl + Backspace
-  Dokument formatieren                        Strg + K, Strg + D / Strk + K, Strg + F   
-  Auskommentieren                             Strg + K, Strg + C                        
-  Auskommentieren aufheben                    Strg + K , Strg + U                       
-  Umschließen mit ...                         Strg + K, Strg + S                        
-  Variable in allen Projektdateien umbennen   Strg + R, Strg + R                        
-  Bookmark toggle                             Strg + K, Strg + K                        
-  Bookmark Window                             Strg + W, B                               
-  Bereich klappen toggle                      Strg + M, Strg + M                        Shift + alt + Cmd +  ←
+|Was macht der Shortcut?                    |Windows                                   |Mac                                     |
+|-------------------------------------------|----------------------------------------- |----------------------------------------|
+|  Zur Referenz springen                    |F12                                       |Fn + F12                                |    
+|  Zum nächsten Wort springen               |Strg + / Strg +                           |alt + / alt +                           |
+|  Zum Anfang/ Ende der Zeile springen      |Home / End                                |Fn + / Fn +                             |
+|  Runter-/Hochscrollen                     |Page Down/ Page Up                        |Fn + ↑ / Fn + ↓                         |
+|  Zum Anfang / Ende der Datei springen     |Strg + Home / Strg + End                  |Fn + alt + ↑ / Fn + alt + ↓             |
+|  Duplizieren                              |Strg + D                                  |Cmd + D                                 |
+|  Löschen eines Wortes                     |Strg + Backspace / Strg+ Entf             |Alt + Backspace / fn + alt + Backspace  |
+|  Ganze Zeile löschen                      |Strg + L / Strg + X                       |Ctrl + Backspace                        |
+|  Dokument formatieren                     |Strg + K, Strg + D / Strk + K, Strg + F   |                                        |
+|  Auskommentieren                          |Strg + K, Strg + C                        |                                        |
+|  Auskommentieren aufheben                 |Strg + K , Strg + U                       |                                        |
+|  Umschließen mit ...                      |Strg + K, Strg + S                        |                                        |
+|  Variable in allen Projektdateien umbennen|Strg + R, Strg + R                        |                                        |
+|  Bookmark toggle                          |Strg + K, Strg + K                        |                                        |
+|  Bookmark Window                          |Strg + W, B                               |                                        |
+|  Bereich klappen toggle                   |Strg + M, Strg + M                        |Shift + alt + Cmd +  ←                  |
 
   ----------------------------------------- ------------------ --
   Finden-Dialog anzeigen                    Strg + F           
