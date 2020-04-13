@@ -155,9 +155,7 @@ SOLID Prinzipien
     erstellen, von denen geerbt werden kann, um spezifische Methoden
     oder Eigenschaften zu implementieren)
 -   Weitere Lösungen:
-
     -   Interfaces
-
     -   Möglichst viele Abstraktion einführen
 
 -   **Wichtig**: Nicht übertreiben! Abstraktion erhöht die Komplexität!
@@ -166,13 +164,11 @@ SOLID Prinzipien
 
 -   Unterklasse sollte Funktionalität der Oberklasse nur erweitern,
     nicht verändern oder einschränken **oder**
-
 -   Unterklasse sollte immer so verwendbar sein, wie die Oberklasse
 
 ### **I**nterface Segregation Principle
 
 -   Zu große Schnittstellen sollten in kleiner aufgeteilt werden
-
 -   **Vorteile**: schlanke Interfaces, jedes Interface hat eine
     Zuständigkeit, leichtere Wartung, Klassen implementieren nur das
     nötigste
@@ -181,15 +177,12 @@ SOLID Prinzipien
 
 -   Klassen höhere Ebene sollten nicht von Klassen niederer Ebene
     abhängen. (Abstraktion mittels Interfaces)
-
 -   Schnittstellen sollten nicht von Details abhängen, sondern von den
     Details der Schnittstelle
 
 -   **Vorteile:**
-
     -   Erweiterung oder Austausch der unteren Ebene ohne Änderungen an
         der höheren Ebene
-
     -   Höhere Ebene muss viel weniger über untere Ebene wissen, da
         Interface alles bereitstellt
 
@@ -197,97 +190,67 @@ UML Klassendiagramme
 --------------------
 
 -   Unified Modelling Language
-
     -   Besteht aus zahlreichen Digrammtypen
-
     -   Softwaresysteme aus unterschiedlichen Perspektiven darstelllen
 
 -   UML-Klassendiagramme stellen statische Struktur eines Systems dar
-
-    -   Software bzw. Link: <https://www.draw.io>
+    -   Beispielsweise erstellbar bei: <https://www.draw.io>
 
 ### UML - klassenspzifische Angaben
 
 -   Zugriffsmodifikatoren
-
     -   public: +
-
     -   protected: \#
-
     -   private: -
-
     -   internal: \~
 
 -   Variablen/Eigenschaften:
-
     -   Kleingeschrieben: Variable
-
     -   Großgeschrieben: Property
 
 -   Variablen, Properties oder ähnliches kann auch vor der Angabe
     deklariert werden
-
     -   Bsp: \<\<Property\>\> + Name
-
     -   \<\<Abstract\>\> class
-
     -   \<\<Variable\>\> + name
 
 ### Vererbung / Verbindungen zwischen Klassen / Multiplizitäten
 
 -   **Verberbung** wird als Pfeil mit Keyword „extends dargestellt"
-
 -   **Assoziation** wird mit einer einfachen Verbindung zwischen zwei
     Klassen dargestellt
-
 -   **Composition** wird als Pfeil mit ausgemalter Raute dargestellt
     (Teil-Ganze-Beziehung)
-
     -   Def. Composition: Die abhängige Klasse kann nur existieren, wenn
         die andere Klasse existiert Bsp.: Zoo Toilette
 
 -   **Aggregation** wird als Pfeil mit nicht ausgemalter Raute
     dargestellt (Teil-Ganze-Beziehung)
-
     -   Def. Aggregation: Die abhängige Klasse kann auch ohne die andere
         Klasse existieren
 
 -   **Multiplizitäten** drücken aus, wie viele Objekte einer Klasse A
     mit Objekten einer Klasse B in Verbindung stehen können
-
     -   Dabei können an die Assoziationen die Mengen geschreiben werden
-
-    -   ![](.//media/image1.PNG){width="6.3in"
-        height="1.3208333333333333in"}Bsp.: 1 Person besitzt mind. 1 bis
-        unendlich viele Autos
-
-###  {#section .list-paragraph}
+    -   Bsp.: 1 Person besitzt mind. 1 bis unendlich viele Autos
+    ![](.//media/image1.PNG)
 
 Design Patterns
 ---------------
 
 -   Warum? Wartbarkeit des Codes nachfolgende Besipiele sind
     Best-Practice-Lösung
-
 -   Buch: Design Patterns -- Elements of Reusable Object-Oriented
     Software
-
 -   Kategorien
-
     -   Erzeugungsmuster
-
         -   Zweck: Erzeugen voon Objekten
-
         -   Prinzip:
-
             -   Client benötigt Objekt von bestimmten Typ
-
             -   Erzeugerklasse wird beauftragt, Objekt zu erzeugen
-
             -   Client benötigt keine Infos über Erzeugung
 
     -   Strukturmuster
-
     -   Verhaltensmuster
 
 ###  Erzeugungsmsuter
@@ -296,82 +259,57 @@ Design Patterns
 
 -   **Zweck**: Sinnvoll, wenn erst zur Laufzeit des Programms Klassen
     ausgewählt und Objekte davon erzeugt werden sollen
-
 -   **Anwendungsfall**: Wenn zur Zeit der Programmierung noch **nicht**
     klar ist, welches konkrete Objekt benötigt wird
-
--   ![](.//media/image2.PNG){width="6.3in"
-    height="2.6944444444444446in"}UML:
+-   UML:![](.//media/image2.PNG)
 
 -   Vorteile:
-
     -   Erweiterbarkeit
-
     -   Wiederverwendbarkeit
-
     -   Client ist entkoppelt
 
 -   Nachteile:
-
     -   Zwei Vererbungshierarchien
 
 #### Abstract Factory Pattern
 
 -   **Zweck:** s. [Factory Method Pattern](#factory-method-pattern) -
     Unterschied: Nicht nur ein Produkt, sondern Produkfamilie erzeugen
-
 -   **Anwendungsfall:** s. [Factory Method
     Pattern](#factory-method-pattern)
 
--   ![](.//media/image3.PNG){width="5.121527777777778in"
-    height="4.701388888888889in"}UML:
+-   UML:![](.//media/image3.PNG)
 
 -   Vorteile:
-
     -   Client komplett enkoppelt
-
     -   Erweiterbarkeit
 
 -   Nachteile:
-
     -   Erweiterbarkeit
-
         -   Neue Produkte in der Produktfamilie hinzuzufügen ist
             schwierig bricht mit bestehendem Code
 
 #### Singleton Pattern
 
 -   **Zweck:** Es darf von einer Klasse nur eine Instanz erzeugt werden
-
 -   **Anwendungsfall:** Für eine Aufgabe, bei der nur ein Objekt
     benötigt wird (Controller)
-
--   ![](.//media/image4.png){width="3.904166666666667in"
-    height="2.432638888888889in"}UML:
+-   UML:![](.//media/image4.png)
 
 -   Kategorien:
-
     -   Basic Singleton
-
     -   Lazy Singleton -- erweiterter Basic Singleton, **Instance wird
         nur angelegt, wenn sie wirklich benötigt wird,** Instanz wird im
         getInstance() erstellt
-
     -   Threadsafe Singleton -- erstellen von
-
         -   Private static object lockobjet = new object();
-
         -   In getInstance Methode:
 
 > *lock (lockobject)*
->
-> *{*
->
-> *If (instance==null)*
->
-> *Instance = new Singleton();*
->
-> *}*
+>   *{*
+>       *If (instance==null)*
+>           *Instance = new Singleton();*
+>   *}*
 
 -   Vorteile:
 
