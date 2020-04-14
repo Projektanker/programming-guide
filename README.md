@@ -261,7 +261,8 @@ Design Patterns
     ausgewählt und Objekte davon erzeugt werden sollen
 -   **Anwendungsfall**: Wenn zur Zeit der Programmierung noch **nicht**
     klar ist, welches konkrete Objekt benötigt wird
--   UML:![](.//media/image2.PNG)
+-   UML:  
+![](.//media/image2.PNG)
 
 -   Vorteile:
     -   Erweiterbarkeit
@@ -278,7 +279,7 @@ Design Patterns
 -   **Anwendungsfall:** s. [Factory Method
     Pattern](#factory-method-pattern)
 
--   UML:
+-   UML:  
 ![](.//media/image3.PNG)
 
 -   Vorteile:
@@ -295,7 +296,8 @@ Design Patterns
 -   **Zweck:** Es darf von einer Klasse nur eine Instanz erzeugt werden
 -   **Anwendungsfall:** Für eine Aufgabe, bei der nur ein Objekt
     benötigt wird (Controller)
--   UML:![](.//media/image4.png)
+-   UML:  
+![](.//media/image4.png)
 
 -   Kategorien:
     -   Basic Singleton
@@ -314,7 +316,6 @@ Design Patterns
            *Instance = new Singleton();*
    *}*
 '''
-
 
 -   Vorteile:
     -   Ersetzt global zugägnliche Variablen
@@ -338,7 +339,7 @@ Strukturen zu bilden
 -   **Anwendungsfall:** Wenn bestimmte Klassen zur Wiederverwendung
     konzipiert wurden (Klassenbibliotheken)
 
--   UML:
+-   UML:  
 ![](.//media/image5.png)
 
 -   **Wichtig:** Aufwand abschätzen! Wenn zu groß, Klasse neu schreiben
@@ -361,7 +362,7 @@ Strukturen zu bilden
 -   **Anwendungsbeispiel:** Filesystem (Diretory = Composite / File =
     Leaf)
 
--   UML:
+-   UML:  
 ![](.//media/image6.png)
 
 -   Vorteile:
@@ -379,7 +380,7 @@ Strukturen zu bilden
     Klasse mit zusätzlichen Funktionaltitäten zur Laufzeit zu erweitern
     (**ohne Vererbung**)
 
--   UML:
+-   UML:  
 ![](.//media/image7.png)
 
 -   Vorteile:
@@ -396,7 +397,7 @@ Strukturen zu bilden
     Schnittstelle zu einer Menge von Schnittstellen eines Subsystems --
     vor allem bei komplexen Subsystemen sehr gut
 
--   UML:
+-   UML:  
 ![](.//media/image8.png)
 
 -   Vorteile:
@@ -424,7 +425,7 @@ Strukturen zu bilden
     -   Objekte besitzen Eigenschaften, die sie sich
         mit anderen Objekten teilen können
 
--   UML:
+-   UML:  
 ![](.//media/image9.png)
 
 -   Vorteile
@@ -448,7 +449,7 @@ Strukturen zu bilden
     -   Remote-Proxy
     -   Dynamisches-Proxy
 
--   UML:
+-   UML:  
 ![](.//media/image10.png)
 
 -   Decorator vs. Proxy:
@@ -485,8 +486,8 @@ von Objekten untereinander
 -   **Anwendungsfälle:** GUIs, Transaktionssysteme, Befehle zeitlich
     verzögert ausführen
 
--   UML:
-![](.//media/image11.png)
+-   UML:  
+![](.//media/image11.png)  
     --> Kann n-ConcreteCommands beinhalten
 
 -   Vorteile:
@@ -510,9 +511,9 @@ von Objekten untereinander
     -   Durchlaufen von Bäumen, Ergebnisse von Webservices, Cursor auf
         Datenbanken etc.
 
--   UML:
-![](.//media/image12.png)
-    --> Iterator-Methoden Beispiel Methoden
+-   UML:  
+![](.//media/image12.png)  
+--> Iterator-Methoden Beispiel Methoden
 
 -   Vorteile:
     -   Aggregatobejkt kann auf verschiedene Arten durchlaufen werden
@@ -533,7 +534,7 @@ von Objekten untereinander
 -   **Anwendungsfälle:** Chatroom, Flug-Verkehr-Controller, User in
     Online-Spielen
 
--   UML:
+-   UML:  
 ![](.//media/image13.png)
 
 -   Vorteile:
@@ -608,7 +609,7 @@ von Objekten untereinander
 -   **Anwendungsfälle:** Dokumente/Grafiken in verschiednen Formaten speichern, Sortierung von
     Collections
 
--   UML:
+-   UML:  
 ![](.//media/image15.png)
 
 -   Vorteile:
@@ -627,7 +628,7 @@ von Objekten untereinander
 
 -   **Anwendungsfälle:** Planungsprogramme
 
--   UML:
+-   UML:  
 ![](.//media/image16.png)
 
 -   Strategy Pattern vs. Template Method Pattern:
@@ -653,7 +654,7 @@ von Objekten untereinander
             voneinander unterscheiden
         -   Objekt kann immer nur **genau einen Zustand** haben
 
--   UML:
+-   UML:  
 ![](.//media/image17.png)
 
 -   Vorteile:
