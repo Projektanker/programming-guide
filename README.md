@@ -585,7 +585,7 @@ von Objekten untereinander
 -   **Anwednungsfall:** Newsletter, Facebook Beitragsverfolgung,
     WhatsApp Gruppen, Grafische Elemente einer Benutzeroberfläche
 
--   UML:
+-   UML:  
 ![](.//media/image14.png)
 
 -   Vorteile:
