@@ -306,6 +306,7 @@ Design Patterns
         -   Private static object lockobjet = new object();
         -   In getInstance Methode:
 
+//TODO:Find c# doc nugget
 '''C#
 *lock (lockobject)*
    *{*
@@ -316,15 +317,11 @@ Design Patterns
 
 
 -   Vorteile:
-
     -   Ersetzt global zugägnliche Variablen
-
     -   Verhindert, dass unnötig viele Objekte erstellt werden
 
 -   Nachteile:
-
     -   Bedingungslose und globale Verfügung
-
     -   Wartbarkeit
 
 ### Strukturmuster
@@ -341,20 +338,17 @@ Strukturen zu bilden
 -   **Anwendungsfall:** Wenn bestimmte Klassen zur Wiederverwendung
     konzipiert wurden (Klassenbibliotheken)
 
--   ![](.//media/image5.png){width="6.3in"
-    height="2.8777777777777778in"}UML:
+-   UML:
+![](.//media/image5.png)
 
 -   **Wichtig:** Aufwand abschätzen! Wenn zu groß, Klasse neu schreiben
     und direkt Interface implementieren
 
 -   Vorteile:
-
     -   Wiederverwendbarkeit und Flexibilität erhöht
-
     -   Verbindung von zwei inkompatiblen Interfaces
 
 -   Nachteile:
-
     -   Arbeitsaufwand entlang einer Adapterkette kann hoch sein
 
 #### Composite Pattern
@@ -367,20 +361,16 @@ Strukturen zu bilden
 -   **Anwendungsbeispiel:** Filesystem (Diretory = Composite / File =
     Leaf)
 
--   ![](.//media/image6.png){width="4.8805555555555555in"
-    height="2.703472222222222in"}UML:
+-   UML:
+![](.//media/image6.png)
 
 -   Vorteile:
-
     -   Einheitliche Behandlung von Primitiven und Kompositionen
-
     -   Flexibilität und Erweiterbarkeit
-
     -   Verschachteltet Strukturen mit beliebiger Tiefe möglich
 
 -   Nachteile:
-
-    -   Entwurf zu allgemein erschwert beschränken der Komposition auf
+    -   Entwurf zu allgemein → erschwert beschränken der Komposition auf
         bestimmte Klassen
 
 #### Decorator Pattern
@@ -389,21 +379,16 @@ Strukturen zu bilden
     Klasse mit zusätzlichen Funktionaltitäten zur Laufzeit zu erweitern
     (**ohne Vererbung**)
 
--   ![](.//media/image7.png){width="6.3in" height="3.4125in"}UML:
+-   UML:
+![](.//media/image7.png)
 
 -   Vorteile:
-
     -   Extrem große Klassenhierarchien verhindern
-
     -   Geringerer Wartungsaufwand
-
     -   Dynamik und Flexibilität
 
 -   Nachteile:
-
-    -   Aufruf einer Basisfunktionalität muss zweimal ausgeführt werden
-
-> Dekorator ist nur ein Wrapper
+    -   Aufruf einer Basisfunktionalität muss zweimal ausgeführt werden → Dekorator ist nur ein Wrapper
 
 #### Facade Pattern
 
@@ -411,19 +396,15 @@ Strukturen zu bilden
     Schnittstelle zu einer Menge von Schnittstellen eines Subsystems --
     vor allem bei komplexen Subsystemen sehr gut
 
--   ![](.//media/image8.png){width="3.566666666666667in"
-    height="3.1284722222222223in"}UML:
+-   UML:
+![](.//media/image8.png)
 
 -   Vorteile:
-
     -   Lose Kopplung zwischen Client und Subsystem
-
     -   Senkt Komplexität
 
 -   Nachteile:
-
     -   Zusätzliche Schichte beeinflusst eventuell Performance
-
     -   Entwickler müssen lernen, die neue Schnittstelle zu nutzen
 
 #### Flyweight Pattern
@@ -431,34 +412,26 @@ Strukturen zu bilden
 -   **Zweck:** Methode zur Speicheroptimierung, wenn von einer Klasse
     sehr viele Objekte erstellt werden, die sich bestimmte variable
     Informationen teilen
-
-> die geteilten Informationen = intrinsische Werte Flyweight Objekte
->
-> die außengespeicherten Informationen = extrinsische Werte werden in
-> effizienteren Datenstrukturen gespeichert und an Methoden übergeben
+    - die geteilten Informationen = intrinsische Werte Flyweight Objekte
+    - die außengespeicherten Informationen = extrinsische Werte werden in
+    - effizienteren Datenstrukturen gespeichert und an Methoden übergeben
 
 -   **Anwendungsfall:**
-
     -   Anzahl der erzeugten Objekte ist sehr hoch (100k -- 1b oder
         mehr)
-
     -   Erzeugung der vielen Objekte ist kompliziert und kostet
         Performance
-
-    -   ![](.//media/image9.png){width="5.15625in"
-        height="2.9875in"}Objekte besitzen Eigenschaften, die sie sich
+    -   Objekte besitzen Eigenschaften, die sie sich
         mit anderen Objekten teilen können
 
 -   UML:
+![](.//media/image9.png)
 
 -   Vorteile
-
     -   Sparen von Speicherplatz
 
 -   Nachteile:
-
     -   Allgemeine Codekomplexität wird erhöht
-
     -   Vergeudung von CPU-Zeit
 
 #### Proxy Pattern
@@ -468,44 +441,31 @@ Strukturen zu bilden
     dann auf das Zielobjekt zugreift
 
 -   **Anwendungsfälle:**
-
     -   Schutz-Proxy: Zielobjekt des Clients wird um Schutzebene
         erweitert
-
     -   Virtuelles-Proxy: verbessert Performance, Objekterstellung wird
         erst dann erstellt, wenn es wirklich benötigt wird0
-
     -   Remote-Proxy
-
     -   Dynamisches-Proxy
 
--   ![](.//media/image10.png){width="5.372916666666667in"
-    height="2.8340277777777776in"}UML:
+-   UML:
+![](.//media/image10.png)
 
 -   Decorator vs. Proxy:
-
     -   Proxy behält Schnittstelle bei
-
     -   Decorator fügt zusätzliche Funktionaltitäten hinzu
 
 -   Adapter vs. Proxy
-
     -   Adapter ändert häufig die Schnittstelle
-
     -   Proxy stellt immer die vollständige Schnittstelle zur Verfügung
 
 -   Vorteile:
-
     -   Zusätzliche Ebene der Kontrolle
-
     -   Steigert Performance des Softwaresystems
 
 -   Nachteile
-
     -   Komplexität wird erhöht
-
     -   Geschwindigkeitseinbußen (gerade beim Schutz-Proxy)
-
     -   Notwenidgkeit die Schnittstelle des Subjekts vollständig im
         Proxy zu implementieren
 
@@ -517,35 +477,25 @@ von Objekten untereinander
 #### Command Pattern
 
 -   **Zweck:** Befehle werden in extra Objekten gekapselt.
-
-> Clients mit verschiedenen Anfragen können parametrisiert werden
->
-> Operationen können in eine schlange eingereiht werden
->
-> Logbuchführung
->
-> Operationen rückgängig machen
+    - Clients mit verschiedenen Anfragen können parametrisiert werden
+    - Operationen können in eine schlange eingereiht werden
+    - Logbuchführung
+    - Operationen rückgängig machen
 
 -   **Anwendungsfälle:** GUIs, Transaktionssysteme, Befehle zeitlich
     verzögert ausführen
 
--   ![](.//media/image11.png){width="4.552083333333333in"
-    height="2.4208333333333334in"}UML:
-
-> Kann n-ConcreteCommands beinhalten
+-   UML:
+![](.//media/image11.png)
+    --> Kann n-ConcreteCommands beinhalten
 
 -   Vorteile:
-
     -   Wiederverwendbarkeit
-
     -   Einfache Implementierung der Rückgängig-Funktion
-
     -   Einfache Protokollierung
-
     -   Flexibilität
 
 -   Nachteile:
-
     -   Hohe Klassenanzahl
 
 #### Iterator Pattern
@@ -554,32 +504,23 @@ von Objekten untereinander
     Objekten zu durchlaufen
 
 -   **Anwendungsfälle:**
-
     -   Zugriff auf Inhalte von Aggregatobjekten (Kümmern sich um
         Datenhaltung), ohne über die interne Darstellung mehr zu wissen
-
     -   Mehrere Iterationswege zur Verfügung stellen
-
     -   Durchlaufen von Bäumen, Ergebnisse von Webservices, Cursor auf
         Datenbanken etc.
 
--   ![](.//media/image12.png){width="5.559027777777778in"
-    height="2.7625in"}UML:
-
-    -   Iterator-Methoden Beispiel Methoden
+-   UML:
+![](.//media/image12.png)
+    --> Iterator-Methoden Beispiel Methoden
 
 -   Vorteile:
-
     -   Aggregatobejkt kann auf verschiedene Arten durchlaufen werden
-
     -   Komplexe Datenstrukture kann vor Clients verborgen werden
-
     -   Eihnheitliche Schnittstelle, um Datenstrukturen zu durchlaufen
-
     -   Vereinfacht den Code von Aggregatobjekten
 
 -   Nachteile
-
     -   Bei einfachen Aggreagtobjekten oft zu komplex
 
 #### Mediator Pattern
@@ -592,20 +533,16 @@ von Objekten untereinander
 -   **Anwendungsfälle:** Chatroom, Flug-Verkehr-Controller, User in
     Online-Spielen
 
--   ![](.//media/image13.png){width="4.968055555555556in"
-    height="2.8402777777777777in"}UML:
+-   UML:
+![](.//media/image13.png)
 
 -   Vorteile:
-
     -   Bessere Wiederverwendbarkeit
-
     -   LoseKopplung
-
     -   Änderung des kooperativen Verhaltens kann unabhängig
         durchgeführt werde
 
 -   Nachteile:
-
     -   Komplexität
 
 #### Memento Patttern
@@ -613,28 +550,23 @@ von Objekten untereinander
 -   **Zweck:** Interner Zustand eines Objektes wird erfasst und
     externalisiert. Objekt kann dadurch zu späterem Zeitpunkt in diesen
     Zustand zurückversetzt werden.
-
     -   Extra Klasse (Caretaker) sorgt für Aufbewahrung hat keinen
         Zugriff auf Inhalt des Mementos
 
 -   **Anwendungsfall:** Undo-Funktionalität ( z.B.: Text-Verarbeitung),
     Lautstärkeverstellung mit Inkrementierung
 
+//TODO: Find Missind Img
 -   UML:
-
     -   Caretaker ruft „createMemento" auf
 
 -   Vorteile:
-
     -   Speicherung des Objektzustands, ohne Kapselung zu
         beeinträchtigen
-
     -   Wiederherstellungsmechanismus
-
     -   Vereinfacht Implementierung der Klasse Originator
 
 -   Nachteil:
-
     -   Kann sehr aufwendig sein (abhängig von Daten bzw. Zuständen)
 
 #### Observer Pattern
@@ -645,34 +577,25 @@ von Objekten untereinander
     und aktualisiert.
 
 -   **Prinzip:**
-
     -   Objekt interessiert sich für den Zustand eines anderen Objekts
-
     -   Mechanismus: Objekt (Observer) registriert sich bei jeweiligen
         Objekt
-
-> sobald sich Zustand beim beobachteten Objekt ändert, wird
-> update()-Methode des Beobachters aufgerufen
+        - sobald sich Zustand beim beobachteten Objekt ändert, wird update()-Methode des Beobachters aufgerufen
 
 -   **Anwednungsfall:** Newsletter, Facebook Beitragsverfolgung,
     WhatsApp Gruppen, Grafische Elemente einer Benutzeroberfläche
 
--   ![](.//media/image14.png){width="4.979166666666667in"
-    height="3.0388888888888888in"}UML:
+-   UML:
+![](.//media/image14.png)
 
 -   Vorteile:
-
     -   Zustandskonsistenz
-
     -   Observer können jederzeit hinzugefügt oder entfernt werden
-
     -   Subjekt und Beobachter sind lose gekoppelt
 
 -   Nachteile:
-
     -   Hohe Anzahl an Beobachtern bei Änderungen hohe Änderungskosten
         (Rechenleistung)
-
     -   Quellcode des Subjekts zeigt nicht, welche Beobachter genau
         informiert werden
 
@@ -682,23 +605,18 @@ von Objekten untereinander
     Klasse gekapselt und austauschbar sind. Somit kann zur Laufzeit der
     gewünschte Algorithmus ausgeführt werden.
 
--   ![](.//media/image15.png){width="4.991666666666666in"
-    height="2.334722222222222in"}**Anwendungsfälle:** Dokumente/
-    Grafiken in verschiednen Formaten speichern, Sortierung von
+-   **Anwendungsfälle:** Dokumente/Grafiken in verschiednen Formaten speichern, Sortierung von
     Collections
 
 -   UML:
+![](.//media/image15.png)
 
 -   Vorteile:
-
     -   Erweiterbarkeit
-
     -   Algorithmen können zur Laufzeit gewechselt werden
-
     -   Algorithmen sind in eigenen Klassen gekapselt
 
 -   Nachteil:
-
     -   Zusätzlicher Kommunikationsaufwand zwischen Strategie und
         Kontext
 
@@ -707,25 +625,20 @@ von Objekten untereinander
 -   **Zweck:** Sorgt dafür, dass Teilschritte eines Algorithmus variabel
     gehalten werden kann.
 
--   ![](.//media/image16.png){width="4.0368055555555555in"
-    height="2.261111111111111in"}**Anwendungsfälle:** Planungsprogramme
+-   **Anwendungsfälle:** Planungsprogramme
 
 -   UML:
+![](.//media/image16.png)
 
 -   Strategy Pattern vs. Template Method Pattern:
-
     -   Strategy Pattern: Gesamten Algorithmus austauschen
-
     -   Template Method Pattern: Teile des Algorithmus tauschen
 
 -   Vorteile:
-
     -   Keine Redundanz
-
     -   Flexibilität
 
 -   Nachteil:
-
     -   Das verstehen der genauen Ablaufreihenfolde kann manchmal
         verwirrend sein, da in ConcreteClass genauer Ablauf steht
 
@@ -736,23 +649,18 @@ von Objekten untereinander
     so aussehen, als ob das Objekt seine Klasse gewechselt hat.
 
     -   **Vorraussetzungen:**
-
         -   Objekt muss Zustände annehmen können, die sich **deutlich**
             voneinander unterscheiden
-
         -   Objekt kann immer nur **genau einen Zustand** haben
 
--   ![](.//media/image17.png){width="4.9847222222222225in"
-    height="2.3243055555555556in"}UML:
+-   UML:
+![](.//media/image17.png)
 
 -   Vorteile:
-
     -   Erweiterbarkeit
-
     -   Übersichtlichkeit
 
 -   Nachteile:
-
     -   Bei einfachen Zuständen zu großer Implementierungsaufwand
 
 C\#
@@ -773,9 +681,7 @@ Interfaces
 ----------
 
 -   Unterschied explizites und implizites Interface:
-
     -   Explizit: implementierte Methoden sind private
-
     -   Implizit : implementierte Methoden sind public
 
 -   Hat eine Klasse zwei unterschiedliche Zugriffe von außen, sollten
@@ -788,9 +694,7 @@ Interfaces
     Segregation Principle](#interface-segregation-principle) verstößt
 
 ### Implicit Interfaces
-
 -   „Normale" Nutzung von Interfaces
-
 -   Reicht meistens aus
 
 Testing
@@ -800,22 +704,18 @@ Testing
 
 -   Testet eine bestimmten Code-Teil, Klasse oder mehrere Klassen ohne
     die externen Abhängigkeiten (Datenbanken etc.)
-
 -   Schnell und einfach zu schreiben, liefern schnelle Ergebnisse
 
 ### Integration Tests
 
 -   Testet einen Code-Teil, Klasse oder mehrere Klassen mit den externen
     Abhängigkeiten
-
 -   Dauern etwas länger, sollten nur für die Teile des Codes benutzt
     werden, wo die Unit Tests nicht mehr ausreichen
 
 ### End-To-End Tests
 
 -   User-Interface Tests für mich eher unwichtig
-
-[]{#_Toc36800196 .anchor}
 
 Mathmatics
 ==========
