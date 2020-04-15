@@ -35,7 +35,12 @@ Programming Guide
             - [State Pattern](#state-pattern)
 - [C\#](#c)
     - [Threads](#threads)
+    - [Interfaces](#interfaces)
+    - [Testing](#testing)
+
 - [Mathmatics](#mathematics)
+    - [Bayesche Netze](#bayesche-netze)
+        - [Gibbs Sampling](#gibbs-sampling)
 
 - [Unity](#unity)
     - [Unity Shortcuts](#unity-shortcuts)
