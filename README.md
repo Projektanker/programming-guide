@@ -672,9 +672,7 @@ Threads
 
 -   Threads ermöglichen das parallele Ausführen von Code führt zu
     besserer Performance
-
 -   Threads werden dadurch unabhängig voneinander ausgeführt
-
 -   In Threads werden Aufagben ausgelagert, die viel Performance
     brauchen führt zu einem weiteren flüssigen Verlauf
 
@@ -729,59 +727,54 @@ Bayesche Netze
 -   Gibbs Sampling ist eine Methode zur Annäherung an die reale
     Wahrscheinlichkeit
 
-![](.//media/image18.PNG){width="4.79375in"
-height="3.7729166666666667in"}Wie funktioniert Gibbs Sampling? -- Ein
-Beispiel mit Topic Model
+Wie funktioniert Gibbs Sampling? -- Ein Beispiel mit Topic Model  
+![](.//media/image18.PNG)
 
 -   Jedes Topic ist in den Kästen zu sehen.
-
 -   Jeder kreis auf den Wörtern die Zuordnung zu den Topics
 
--   ![](.//media/image19.PNG){width="1.6645833333333333in"
-    height="0.3923611111111111in"}Man startet mit der Änderung einer
-    Topic Zuordnung eines einzelnen Wortes
+-   Man startet mit der Änderung einer Topic Zuordnung eines einzelnen Wortes  
+![](.//media/image19.PNG)
 
--   ![](.//media/image20.PNG){width="4.132638888888889in"
-    height="2.2180555555555554in"}Dann werden alle Topics und alle
-    Wörter in die Berechnung mit einbezogen, um zu errechnen, welchem
-    Topic das Wort „record" am wahrscheinlichsten angehört
+-   Dann werden alle Topics und alle Wörter in die Berechnung mit einbezogen, um zu errechnen, welchem
+    Topic das Wort „record" am wahrscheinlichsten angehört  
+    ![](.//media/image20.PNG)
 
--   ![](.//media/image21.PNG){width="4.223611111111111in"
-    height="2.870138888888889in"}Formel:
+-   Formel:  
+![](.//media/image21.PNG)
 
--   ![](.//media/image22.PNG){width="4.5443438320209975in"
-    height="3.3065715223097114in"}Man beginnt jetzt ein Wort zu samplen
-    ( anderes Beispiel als oben)
+-   Man beginnt jetzt ein Wort zu samplen (anderes Beispiel als oben)  
+![](.//media/image22.PNG)
 
 -   Trade war dem Topic 2 zugeordnet. Jetzt wird diese Zuordnung
     entfernt, und die Daten in der Tabelle aktualisiert. D.h. die „2"
     bei trade wird zu ?, und der Count bei „trade" -- Topic 2 wird zu
     „7"
 
--   ![](.//media/image23.PNG){width="4.020833333333333in"
-    height="1.6520833333333333in"}Im nächsten Schritt, schaut man sich
+-   Im nächsten Schritt, schaut man sich
     an, wie sehr das Dokument das jeweilig Topic „mag" (repräsentiert
-    als blaue Streifen)
+    als blaue Streifen)  
+    ![](.//media/image23.PNG)
 
--   ![](.//media/image24.PNG){width="3.427561242344707in"
-    height="1.0001399825021873in"}Wird in der Formel bei den rot
-    markiertern Variablen repräsentiert
+-   Wird in der Formel bei den rot
+    markiertern Variablen repräsentiert  
+    ![](.//media/image24.PNG)
 
--   ![](.//media/image25.PNG){width="4.123611111111111in"
-    height="1.3604166666666666in"}![](.//media/image26.PNG){width="2.560416666666667in"
-    height="0.6305555555555555in"}Nun schaut man sich noch den hinteren
+-   Nun schaut man sich noch den hinteren
     Teil der Gleichung an. Hierfür wird die absolute Anzahl des Wortes
     benutzt, welches dem jeweiligen Topic zugeordnet wird. Daraus ergibt
     sich dann eine Fläche. Diese repräsentiert die Wahrscheinlichkeit
-    der Zuordnung zu diesem Thema.
+    der Zuordnung zu diesem Thema.  
+    ![](.//media/image25.PNG)  
+    ![](.//media/image26.PNG)
 
--   ![](.//media/image27.PNG){width="4.955555555555556in"
-    height="3.282638888888889in"}Nun wird zufällig zwischen diesen drei
+-   Nun wird zufällig zwischen diesen drei
     Flächen ausgewählt, wobei Topic 1 die größte Fläche hat. Angenommmen
     man trifft diese. Danach werden die Daten aktualisiert. „trade" wird
-    dem Topic 1 zugeordnet und der Count steigt von 10 auf 11.
+    dem Topic 1 zugeordnet und der Count steigt von 10 auf 11.  
+    ![](.//media/image27.PNG)
 
--   Topic Selection mittels Gibbs-Sampling:
+-   Topic Selection mittels Gibbs-Sampling:  
 ![](.//media/image28.PNG)
 
 Unity
