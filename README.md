@@ -314,12 +314,12 @@ Design Patterns
         -   In getInstance Methode:
 
 //TODO:Find c# doc nugget
-'''C#
-*lock (lockobject)*
-   *{*
-       *If (instance==null)*
-           *Instance = new Singleton();*
-   *}*
+'''cs
+lock (lockobject)
+   {
+       If (instance==null)
+           Instance = new Singleton();
+   }
 '''
 
 -   Vorteile:
