@@ -313,7 +313,6 @@ Design Patterns
         -   Private static object lockobjet = new object();
         -   In getInstance Methode:
 
-//TODO:Find c# doc nugget
 ```cs
 lock (lockobject)
    {
@@ -703,12 +702,43 @@ Interfaces
 
 Testing
 -------
+### Testing Frameworks
+- MSTest - Microsoft Framework
+- NUnit - via Nuget
+- xUnit - via Nuget
+
+### Test Driven Development (TDD)
+- 3 Schritte
+    1. Test schreiben der 'failed'
+    2. Den einfachsten Code schreiben der den Test passt
+    3. Refactoring, wenn nötigs
+
+- Vorteile:
+    - Testbarer Code
+    - Alles ist mit test abgedeckt --> einfacheres Refactoring
+    - Einfachere Implementierung 
 
 ### Unit Tests
 
 -   Testet eine bestimmten Code-Teil, Klasse oder mehrere Klassen ohne
     die externen Abhängigkeiten (Datenbanken etc.)
 -   Schnell und einfach zu schreiben, liefern schnelle Ergebnisse
+
+#### Conventions & Fundamentals
+-   Naming: ClassToTest_TestScenario_ExpectedResult
+-   Triple A - Rule: Arrange, Act, Assert
+    - Arrange: Variablen deklarieren
+    - Act: Der eigentliche Test
+    - Assert: Result validieren
+
+- Keine Logik in den Codes. (if, else for...) --> diese sollten so simpel wie möglich sein
+- Sauber, lesbar and wartbar
+- Jeder Test sollte isoliert geschrieben sein
+- Nicht zu spezifisch/allgemein
+
+#### What to test?
+- Query('returning'): Testen, ob das richtige Result zurückkommt
+- Commands('Ausführung auf einem Objekt'): Testen, ob das Objekt den richtigen Zunstand hat
 
 ### Integration Tests
 
@@ -1501,7 +1531,9 @@ Navigation & Windows
 |  Tab schließen                     | Strg + F4            |                     |  
 |  Alle offenen Tabs schließen       | Alt + L + W          |                     |  
 |  Navigator Suche                   | Strg + ,             |                     |   
-|  Fullscreen Editor                 | Shift + alt + Enter  |                     |  
+|  Fullscreen Editor                 | Shift + alt + Enter  |                     | 
+|  Projektmappen-Explorer            | Shift + alt + L      |                     |
+|  Test-Explorer                     | Shift + E, T         |                     |
 
 Running, Debugging & Compiling
 ------------------------------
@@ -1538,10 +1570,21 @@ Code Snippets
 |  Interface                          | interface  |
 |  Console Write Line                 | cw         | 
 
+Testing
+-------------
+|  Was macht der Shortcut?                            | Windows           | Mac     |
+|  ---------------------------------------------------| ------------------| -----   |
+|  Run Test | Strg + R, T | |
+|  Run all Tets | Strg + R, A| |
+|  Run last Test | Strg + R, L | |
+
+
 Extensions
 ----------
 
--   Productivity Power Tools
+- Productivity Power Tools
+- CodeMaid
+- ReSharper
 
 Tipps und Tricks
 ================
